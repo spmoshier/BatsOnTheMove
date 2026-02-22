@@ -5,6 +5,7 @@ Included scripts:
 1) centroids - file management, used to prepare files and folders to create clipping extents and calculate centroids
 2) niche_overlap - used to calculate niche overlap metrics for each species using ENMTools (Warren et al. 2021), terra (Hijmans et al. 2026), and geosphere (Hijmans et al. 2024)
 3) range_characteristics - used to calculate range characteristics (total area, latitudinal extent, midpoint latitude, midpoint longitude) using sf/sp/lwsgeom (Pebesma et al. 2026 papers)
+4) figure_plots - code used to generate figures in the paper and supplemental information
 
 Included Supplemental Datasets:
 1) Supplemental Table 1: 
