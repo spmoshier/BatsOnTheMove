@@ -1,10 +1,11 @@
 #set working directory
 setwd("")
 
-#load in ecospat to use ecospat.niche.overlap function
-library(ecospat)
-library(raster)
-library(ggplot2)
+#load in libraries
+library(ggplot2) #plotting
+library(terra) #load in tif raster files, xyCellFRom & ext functions
+library(ENMTools) #raster.overlap function
+library(geosphere) #distGeo function
 
 #load in SDMs (TIF files)
 sum_files<-list.files(path="./Summer_SDMs/",pattern = '.tif$', full.names = T)
@@ -24,11 +25,6 @@ df[,3]<-win_files
 ##redo extents for sdms that did not clip properly
 #set working directory
 setwd("")
-
-##raster.overlap function from ENMTools
-library(ggplot2)
-library(terra)
-library(ENMTools)
 
 #load in SDMs (TIF files) - make sure to use terra rather than raster package
 sum_files<-list.files(path="./Summer_SDMs/",pattern = '.tif$', full.names = T)
@@ -124,9 +120,7 @@ for (i in 1:length(species)){
   writeRaster(winter[[i]], filename = paste0(species[[i]],".tif"), overwrite=T)
 }
 
-library(ENMTools) #raster.overlap function
-library(geosphere) #distGeo function
-library(terra) #xyCellFrom function
+#redo centroid and niche overlap calculations
 setwd("")
 
 #Load in rasters!
