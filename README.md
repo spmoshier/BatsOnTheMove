@@ -1,5 +1,5 @@
 # BatsOnTheMove
-Scripts and datasets used in Moshier et al. 2026 (update with link) for cleaning GBIF data, modeling species distributions, and performing niche overlap calculations.
+Scripts and datasets used in ____ et al. 2026 for cleaning GBIF data, modeling species distributions, and performing niche overlap calculations.
 
 Included scripts:
 1) SDM - code used to generate SDMs using BioClim, MaxEnt, GLM, Random Forest, and weighted ensemble models
